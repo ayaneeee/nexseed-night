@@ -8,7 +8,11 @@ a {
 ul {
   list-style: none;
 }
-
+body{
+  max-width: 1152px;
+  min-width: 1152px;
+  margin: auto;
+}
 // ------------ココから-------------------
 
 @mixin flex_box($justfy:center) {
