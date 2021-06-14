@@ -10,3 +10,11 @@ ul {
 }
 
 // ------------ココから-------------------
+
+@mixin flex_box($justfy:center) {
+  display: flex;
+  justify-content: $justfy;
+  align-items: center;
+}
+// @include flex_box(space-around);
+ 
