@@ -128,7 +128,7 @@ ul {
 
 .section1 .main_box .main_text_pc {
   position: absolute;
-  bottom: -25px;
+  bottom: -50px;
   right: 3px;
   z-index: 20;
 }
