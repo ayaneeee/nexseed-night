@@ -12,15 +12,12 @@ ul {
   list-style: none;
 }
 
-body {
-  max-width: 1152px;
-  margin: auto;
-}
-
 /*----------------------*/
 /*   headerはココから   */
 /*----------------------*/
 .header {
+  max-width: 1152px;
+  height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,10 +27,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 3% 5%;
+  margin: 0 auto;
+  position: relative;
 }
 
-.header .header_right .nav {
+.header .header_left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.header .nav {
+  width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,13 +51,32 @@ body {
           align-items: center;
 }
 
-.header .header_right .nav li {
+.header .nav li {
   padding: 3%;
   font-size: 14px;
 }
 
 /*----------------------*/
 /*   headerはココで終わり   */
+/*----------------------*/
+/*----------------------*/
+/*　レスポンシブはココから   */
+/*----------------------*/
+@media screen and (max-width: 767px) {
+  .header_right {
+    display: none;
+  }
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+}
+
+/*----------------------*/
+/*　レスポンシブはココで終わり   */
 /*----------------------*/
 /*----------------------*/
 /*   footerはココから   */
@@ -62,7 +87,12 @@ body {
 /*----------------------*/
 /*   section1はココから   */
 /*----------------------*/
-main .main_box {
+.section1 {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.section1 .main_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,34 +106,59 @@ main .main_box {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-main .main_box .main_view {
   position: relative;
-  width: 83%;
-  height: 480px;
-  background-image: url(../img/visual_1_pc.png);
-  background-size: cover;
 }
 
-main .main_box .main_view .logo {
-  width: 22%;
+.section1 .main_box .main_text_pc {
   position: absolute;
-  top: -16%;
-  left: -5%;
+  bottom: -25px;
+  right: 3px;
+  z-index: 20;
 }
 
-main .main_box .main_view .text {
-  width: 45%;
-  position: absolute;
-  top: 61%;
-  left: 61%;
+.sp_main {
+  display: none;
 }
 
-main p {
-  margin: 1% 4%;
+.text_sp {
+  display: none;
 }
 
+/*
+
+main{
+  .main_box{
+    @include flex_box();
+    flex-direction: column;
+    position: relative;
+    .logo{
+      width: 20%;
+      position:absolute;
+      top:-18%;
+      left: 3%;
+      z-index: 2;
+    }
+    .main_view{
+      position: relative;
+      width: 83%;
+      height: 480px;
+      background-image: url(../img/visual_1_pc.png);
+      background-size: cover;
+      }
+      .text{
+        width: 45%;
+        position:absolute;
+        top:61%;
+        left: 61%;
+      }
+    }
+  }
+ .main_word{
+    margin: 1% 4%;
+  }
+
+
+*/
 /*----------------------*/
 /*   section1はココで終わり   */
 /*----------------------*/
@@ -116,6 +171,21 @@ main p {
 /*----------------------*/
 /*　レスポンシブはココから   */
 /*----------------------*/
+@media screen and (max-width: 767px) {
+  .pc_main {
+    display: none;
+  }
+  .sp_main {
+    display: initial;
+  }
+  .text_pc {
+    display: none;
+  }
+  .text_sp {
+    display: initial;
+  }
+}
+
 /*----------------------*/
 /*　レスポンシブはココで終わり   */
 /*----------------------*/
