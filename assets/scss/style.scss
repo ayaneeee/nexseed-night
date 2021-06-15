@@ -9,36 +9,32 @@
 /*----------------------*/
 /*   section1はココから   */
 /*----------------------*/
-// .main{
+
+.section1{
+  max-width: 1152px;
+  margin: 0 auto;
   .main_box{
-    max-width: 1152px;
-    @include flex_box();
+    @include flex_box(center);
     flex-direction: column;
-    .main_view{
-      position: relative;
-      width: 83%;
-      height: 480px;
-      background-image: url(../img/visual_1_pc.png);
-      background-size: cover;
-      .logo{
-        width: 22%;
-        position:absolute;
-        top:-16%;
-        left: -5%;
-      }
-      .text{
-        width: 45%;
-        position:absolute;
-        top:61%;
-        left: 61%;
-      }
+    position: relative;  
+    .main_text_pc{
+      position: absolute;
+      bottom: -25px;
+      right: 3px;
+      z-index: 20;
     }
   }
-//  p{
-//     margin: 1% 4%;
-//   }
+}
+.sp_main{
+  display: none;
+}
+.text_sp{
+  display: none;
+}
 
-// }
+
+
+
 
 
 /*----------------------*/
@@ -116,6 +112,7 @@
 /*----------------------*/
 
 @media screen and (max-width:767px) {
+
   // ----------------section2はココから---------------
   .section2-ul {
     width: 320px;
@@ -124,6 +121,41 @@
   }
 }
   // ----------------section2はココで終わり ---------------
+
+.pc_main{
+  display: none;
+}
+.sp_main{
+  display: initial;
+}
+.text_pc{
+  display: none;
+}
+.text_sp{
+  display: initial;
+}
+.logo{
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
 /*----------------------*/
 /*　レスポンシブはココで終わり   */
 /*----------------------*/
+
