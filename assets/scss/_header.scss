@@ -3,7 +3,19 @@
 /*----------------------*/
 
 .header{
-  
+ @include flex_box(flex-end);
+  margin: 3% 5%;
+  .header_right{
+    .nav{
+
+      @include flex_box();
+      li{
+        padding: 3%;
+        font-size: 14px;
+        }
+      }
+  }
+
 }
 
 /*----------------------*/
