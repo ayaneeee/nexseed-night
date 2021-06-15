@@ -12,11 +12,6 @@ ul {
   list-style: none;
 }
 
-body {
-  max-width: 1152px;
-  margin: auto;
-}
-
 /*----------------------*/
 /*   headerはココから   */
 /*----------------------*/
@@ -79,7 +74,8 @@ body {
 /*----------------------*/
 /*   section1はココから   */
 /*----------------------*/
-main .main_box {
+.main_box {
+  max-width: 1152px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,7 +91,7 @@ main .main_box {
           flex-direction: column;
 }
 
-main .main_box .main_view {
+.main_box .main_view {
   position: relative;
   width: 83%;
   height: 480px;
@@ -103,22 +99,18 @@ main .main_box .main_view {
   background-size: cover;
 }
 
-main .main_box .main_view .logo {
+.main_box .main_view .logo {
   width: 22%;
   position: absolute;
   top: -16%;
   left: -5%;
 }
 
-main .main_box .main_view .text {
+.main_box .main_view .text {
   width: 45%;
   position: absolute;
   top: 61%;
   left: 61%;
-}
-
-main p {
-  margin: 1% 4%;
 }
 
 /*----------------------*/
@@ -202,12 +194,6 @@ main p {
 
 /*----------------------*/
 /*   section2はココで終わり  */
-/*----------------------*/
-/*----------------------*/
-/*　レスポンシブはココから   */
-/*----------------------*/
-/*----------------------*/
-/*　レスポンシブはココで終わり   */
 /*----------------------*/
 /*----------------------*/
 /*　レスポンシブはココから   */
