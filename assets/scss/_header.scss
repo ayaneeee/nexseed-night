@@ -1,35 +1,31 @@
 /*----------------------*/
 /*   headerはココから   */
 /*----------------------*/
-// body{
-//   max-width: 1152px;
-//   margin: auto;
-// }
 .header{
   max-width: 1152px;
   height: 120px;
-  // background-color: red;
- @include flex_box(flex-end);
   margin: 0 auto;
+
+ @include flex_box(flex-end);
   position: relative;
-  .header_left{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 10;
-  }
+}
+
+.header_left{
+  position: absolute;
+  top: 10px;
+  left: -6px;
+  z-index: 10;
+ }
   .nav{
-    width: 400px;
-    // background-color: pink;
-    @include flex_box();
-    
-    li{
-      padding: 3%;
-      font-size: 14px;
-      }
+    width: 450px;
+    height: 100px;
+    @include flex_box(space-between);
+  }
+  li{
+    color: $black;
     }
 
-}
+
 
 /*----------------------*/
 /*   headerはココで終わり   */
@@ -40,12 +36,19 @@
 /*----------------------*/
 
 @media screen and (max-width:767px) {
-  .header_right{
-    display: none;
-  }
   .header{
-    flex-direction: column;
     width: 100%;
+    height: 280px;
+    justify-content: center;
+  }
+  // .main_box {
+  //   max-width: 767px;
+  // }
+  .header_left {
+    position: static;
+  }
+  .nav {
+    display: none;
   }
 
 }
