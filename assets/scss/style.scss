@@ -18,7 +18,62 @@
 /*----------------------*/
 /*   section2はココから   */
 /*----------------------*/
-
+.section2 {
+  max-width: 1152px;
+  margin: 0 auto;
+  .section1-h1 {
+    font-size: 2.5em;
+    padding: 3rem;
+    text-transform: capitalize;
+    text-align: center
+  }
+}
+.section2-ul {
+  @include flex_box(space-around);
+  flex-wrap: wrap;
+  margin-bottom: 8rem;
+  .section2-li {
+    max-width: 320px;
+    height: 30rem;
+    margin-bottom: 2rem;
+    .section2-h2 {
+      padding: 1.3rem 0 9rem;
+    }
+  }
+  .section2-p {
+    width: 100px;
+    color: black;
+    margin-left: 12rem;
+    padding-right: 1.2rem;
+    display: inline;
+    // vertical-align: bottom;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 5%;
+      bottom: -10px;
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      transform: translate(-50%);
+      background-color: black;
+    }
+    
+    .section2-a {
+      color: $black;
+    }
+  }
+}
+.section2-p:hover::before {
+  width: 90%;
+  transform: translate(-8%);
+  
+} 
+.section2-li:hover {
+  box-shadow:3px 3px 5px 5px gray;
+  // border:1px solid #000;
+}
 
 
 /*----------------------*/
@@ -31,7 +86,11 @@
 /*----------------------*/
 
 @media screen and (max-width:767px) {
-  
+  .section2-ul {
+    width: 320px;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 /*----------------------*/

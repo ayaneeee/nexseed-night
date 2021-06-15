@@ -11,6 +11,9 @@ ul {
 
 // ------------ココから-------------------
 
+  $black: black;
+  $white: white;
+
 @mixin flex_box($justfy:center) {
   display: flex;
   justify-content: $justfy;
