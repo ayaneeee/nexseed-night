@@ -227,27 +227,23 @@ ul {
 /*　レスポンシブはココから   */
 /*----------------------*/
 @media screen and (max-width: 767px) {
+  .pc_main {
+    display: none;
+  }
+  .sp_main {
+    display: initial;
+  }
+  .text_pc {
+    display: none;
+  }
+  .text_sp {
+    display: initial;
+  }
   .section2-ul {
     width: 320px;
     display: block;
     margin: 0 auto;
   }
-}
-
-.pc_main {
-  display: none;
-}
-
-.sp_main {
-  display: initial;
-}
-
-.text_pc {
-  display: none;
-}
-
-.text_sp {
-  display: initial;
 }
 
 /*----------------------*/

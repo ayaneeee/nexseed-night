@@ -112,7 +112,21 @@
 /*----------------------*/
 
 @media screen and (max-width:767px) {
-
+  .pc_main{
+    display: none;
+  }
+  .sp_main{
+    display: initial;
+  }
+  .text_pc{
+    display: none;
+  }
+  .text_sp{
+    display: initial;
+  }
+  // .logo{
+    
+  // }
   // ----------------section2はココから---------------
   .section2-ul {
     width: 320px;
@@ -122,21 +136,7 @@
 }
   // ----------------section2はココで終わり ---------------
 
-.pc_main{
-  display: none;
-}
-.sp_main{
-  display: initial;
-}
-.text_pc{
-  display: none;
-}
-.text_sp{
-  display: initial;
-}
-.logo{
-  
-}
+
 
 
 
