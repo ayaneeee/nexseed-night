@@ -52,6 +52,10 @@ li {
   color: black;
 }
 
+.navToggle {
+  display: none;
+}
+
 /*----------------------*/
 /*   headerはココで終わり   */
 /*----------------------*/
@@ -61,17 +65,100 @@ li {
 @media screen and (max-width: 767px) {
   .header {
     width: 100%;
-    height: 280px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    height: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .header_left {
     position: static;
   }
   .nav {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
+  .nav-li {
+    font-size: 2em;
+    padding: 1.2rem 0;
+  }
+  /*ハンバーガーアイコンはココから*/
+  /* ハンバーガーアイコン */
+  .btn-burger {
+    cursor: pointer;
+    display: block;
+    width: 56px;
+    height: 60px;
+    position: absolute;
+    top: 80px;
+    right: 90px;
+  }
+  /*ハンバーガーアイコンを作る三本線*/
+  .icon, .icon::before, .icon::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 35px;
+    background-color: #444;
+    border-radius: 2px;
+    display: block;
+    content: '';
+    cursor: pointer;
+    margin: auto;
+  }
+  /*三本線の間隔*/
+  .icon::before {
+    top: 20px;
+  }
+  .icon:after {
+    top: -20px;
+  }
+  /*アイコンをクリックしたら*/
+  .navToggle:checked ~ .btn-burger .icon {
+    background: transparent;
+  }
+  .navToggle:checked ~ .btn-burger .icon::before {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 0;
+  }
+  .navToggle:checked ~ .btn-burger .icon::after {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 0;
+  }
+  .icon,
+  .icon::before,
+  .icon::after {
+    -webkit-transition: all .8s;
+    transition: all .8s;
+  }
+  /*ハンバーガーアイコンはココで終わり*/
+  /*表示されるメニューの中身*/
+  .header_right .nav {
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    z-index: 20;
+  }
+  .header_right .nav-li {
+    background-color: white;
+    text-align: center;
+  }
+  .navToggle:checked ~ .nav {
+    width: 100%;
+    display: block;
+  }
+  /*表示されるメニューの中身はココで終わり*/
 }
 
 /*----------------------*/
@@ -108,10 +195,6 @@ li {
   margin: 0 auto;
 }
 
-.main_img_pc {
-  text-align: center;
-}
-
 .main_box {
   position: relative;
 }
@@ -120,6 +203,10 @@ li {
   position: absolute;
   bottom: -50px;
   right: 3px;
+}
+
+.main_img_pc {
+  text-align: center;
 }
 
 .main_word {
