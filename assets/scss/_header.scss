@@ -6,15 +6,15 @@
   height: 120px;
   margin: 0 auto;
  @include flex_box(flex-end);
-  position: relative;
+  // position: relative;
 }
 
-.header_left{
-  position: absolute;
-  top: 10px;
-  left: -6px;
-  z-index: 10;
- }
+// .header_left{
+//   position: absolute;
+//   top: 10px;
+//   left: -6px;
+//   z-index: 10;
+//  }
   .nav{
     width: 450px;
     height: 100px;
@@ -45,9 +45,9 @@
   // .main_box {
   //   max-width: 767px;
   // }
-  .header_left {
-    position: static;
-  }
+  // .header_left {
+  //   position: static;
+  // }
 
   .nav{
     flex-direction: column;
@@ -68,6 +68,7 @@
   position: absolute;
   top: 80px;
   right: 90px;
+  z-index: 11;
 }
 /*ハンバーガーアイコンを作る三本線*/
 .icon, .icon::before, .icon::after {
